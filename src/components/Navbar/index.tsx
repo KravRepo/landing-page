@@ -11,8 +11,8 @@ import MobileMenu from './MobileMenu'
 import { HideOnMobile, ShowOnMobile } from '@/theme'
 
 const pages: [string, string][] = [
-  ['COMMUNITY', ''],
-  ['GOVERNANCE', ''],
+  // ['COMMUNITY', ''],
+  // ['GOVERNANCE', ''],
   ['DOCS', 'https://docs.krav.trade/welcome-to-krav/introduction']
 ]
 

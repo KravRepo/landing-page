@@ -51,14 +51,14 @@ export default function Stats() {
             textAlign={'right'}
             bottom={{ xs: 12, md: 60, lg: 70 }}
           >
-            $109,000
+            $--
           </Typography>
         </Box>
         <Box>
           <Rec2 />
           <Typography variant="h5">Volume</Typography>
           <Typography variant="h6" bottom={{ xs: 8, md: 60, lg: 70 }}>
-            $12345
+            $--
           </Typography>
         </Box>
         <Box>
@@ -69,7 +69,7 @@ export default function Stats() {
             textAlign={'right'}
             bottom={{ xs: 18, md: 60, lg: 70 }}
           >
-            12345 <span>users</span>
+            -- <span>users</span>
           </Typography>
         </Box>
         <Box
@@ -80,7 +80,7 @@ export default function Stats() {
           <Rec4 />
           <Typography variant="h5">$ AS Collateral</Typography>
           <Typography variant="h6" bottom={{ xs: 18, md: 60, lg: 70 }}>
-            123 <span>Assets</span>
+            -- <span>Assets</span>
           </Typography>
         </Box>
       </Box>

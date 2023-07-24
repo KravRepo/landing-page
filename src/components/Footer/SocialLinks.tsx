@@ -6,16 +6,16 @@ import { GithubIcon } from '@/assets/icons/GithubIcon'
 import { Box, IconButton } from '@mui/material'
 
 const links = [
-  {
-    title: 'Github',
-    icon: GithubIcon,
-    href: ''
-  },
-  {
-    title: 'Medium',
-    icon: MediumIcon,
-    href: ''
-  },
+  // {
+  //   title: 'Github',
+  //   icon: GithubIcon,
+  //   href: ''
+  // },
+  // {
+  //   title: 'Medium',
+  //   icon: MediumIcon,
+  //   href: ''
+  // },
   {
     title: 'Twitter',
     icon: TwitterIcon,
