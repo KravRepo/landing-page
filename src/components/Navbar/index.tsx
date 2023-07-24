@@ -52,9 +52,13 @@ export default function Navbar() {
                 <Typography variant="h5"> {page}</Typography>
               </Button>
             ))}
-            <Button variant="contained">
+            <Button variant="contained" sx={{
+              backgroundSize: '100% !important',
+              backgroundPosition: 'right',
+              cursor: 'auto'
+            }}>
               <Typography variant="h5" whiteSpace={'nowrap'}>
-                Launch App
+                Launch app (coming soon)
               </Typography>
             </Button>
           </Box>
