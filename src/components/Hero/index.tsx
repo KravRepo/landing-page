@@ -37,7 +37,7 @@ export default function Hero() {
         </Typography>
       </ShowOnMobile>
       <Box
-        maxWidth={1440}
+        maxWidth={1200}
         // overflow={'hidden'}
         maxHeight={'90vh'}
         display={{ xs: 'grid', md: 'flex' }}

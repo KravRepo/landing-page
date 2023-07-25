@@ -20,7 +20,7 @@ export default function Marquee2() {
       }}
     >
       <ShowOnMobile>
-        <AnimatedBox2 sx={{ top: '6px', left: 0, width: '100%' }} duration={12}>
+        <AnimatedBox2 sx={{ top: '6px', left: 0, width: '100%' }} duration={18}>
           <Box width="100%">
             {Array.from(Array(4).keys()).map((_, idx) => (
               <Img
