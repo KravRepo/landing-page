@@ -7,11 +7,11 @@ import pole2Url from '@/assets/img/pole2.png'
 const content = [
   [
     'Hybrid Liquidity',
-    '(Krav simplifies the process of becoming a liquidity provider by accepting single-token liquidity provisions. This reduces barriers to entry, making it easier for anyone to participate and earn from trading fees)'
+    'Krav simplifies the process of becoming a liquidity provider by accepting single-token liquidity provisions. This reduces barriers to entry, making it easier for anyone to participate and earn from trading fees'
   ],
   [
     'Usage of Mature Oracle',
-    '(Krav relies on mature and established oracle systems to provide the most accurate, real-time price information. Dependable data ensures fair and transparent trading across the platform)'
+    'Krav relies on mature and established oracle systems to provide the most accurate, real-time price information. Dependable data ensures fair and transparent trading across the platform'
   ],
   [
     'Unlocking Volitility to altcoins',
