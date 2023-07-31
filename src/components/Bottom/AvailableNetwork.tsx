@@ -20,7 +20,8 @@ export default function AvailableNetwork() {
           Available on your preferred network
         </Typography>
         <Typography fontSize={20} mt={49} maxWidth={510}>
-          Krav is currently live on Ethereum, BNB Chain, Arbitrum, Avalanche
+          {/* Krav is currently live on Ethereum, BNB Chain, Arbitrum, Avalanche */}
+          Krav is currently live on BASE
         </Typography>
       </Box>
       <Box
