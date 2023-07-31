@@ -1,11 +1,25 @@
+'use client'
 import { Box, Typography } from '@mui/material'
 import Rec1 from '@/assets/svg/rectangle1.svg'
 import Rec2 from '@/assets/svg/rectangle2.svg'
 import Rec3 from '@/assets/svg/rectangle3.svg'
 import Rec4 from '@/assets/svg/rectangle4.svg'
 import Pot from './Pot'
+import { useEffect, useState } from 'react'
+import { IOverviewData, getOverview } from '@/fetch'
 
 export default function Stats() {
+  const [data, setData] = useState<IOverviewData>()
+
+  useEffect(() => {
+    const getData = async ()=> {
+      const ret = await getOverview()
+      if (!ret) return
+      setData(ret)
+    }
+    getData()
+  }, [])
+
   return (
     <>
       <Box
@@ -45,20 +59,20 @@ export default function Stats() {
       >
         <Box>
           <Rec1 />
-          <Typography variant="h5">Staking Fees</Typography>
+          <Typography variant="h5">liquidity</Typography>
           <Typography
             variant="h6"
             textAlign={'right'}
             bottom={{ xs: 12, md: 60, lg: 70 }}
           >
-            $--
+            ${data?.liquiditySupply === undefined ? '--' : (Number(data.liquiditySupply) / 100 ).toFixed(2)}
           </Typography>
         </Box>
         <Box>
           <Rec2 />
           <Typography variant="h5">Volume</Typography>
           <Typography variant="h6" bottom={{ xs: 8, md: 60, lg: 70 }}>
-            $--
+            ${data?.tradingVolume === undefined ? '--' : (Number(data.tradingVolume) / 100 ).toFixed(2)}
           </Typography>
         </Box>
         <Box>
@@ -69,7 +83,7 @@ export default function Stats() {
             textAlign={'right'}
             bottom={{ xs: 18, md: 60, lg: 70 }}
           >
-            -- <span>users</span>
+            {data?.userCount === undefined ? '--' : data.userCount} <span>users</span>
           </Typography>
         </Box>
         <Box
@@ -80,7 +94,7 @@ export default function Stats() {
           <Rec4 />
           <Typography variant="h5">$ AS Collateral</Typography>
           <Typography variant="h6" bottom={{ xs: 18, md: 60, lg: 70 }}>
-            -- <span>Assets</span>
+            1 <span>Assets</span>
           </Typography>
         </Box>
       </Box>
