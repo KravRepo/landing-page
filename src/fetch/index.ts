@@ -7,7 +7,7 @@ export interface IOverviewData {
   userCount: number;
 }
 
-const request = (url: string, options?: any) => {
+const request = <T>(url: string, options?: any): Promise<{data: T}> => {
   return fetch(url, options).then(async response => {
     const json = await response?.json()
     if (response.status !== 200) {
@@ -17,8 +17,7 @@ const request = (url: string, options?: any) => {
   })
 }
 
-export function getOverview(): Promise<IOverviewData> {
-  return request("https://base-api.krav.trade/krav/v1/overview")
+export function getOverview() {
+  return request<IOverviewData>("https://base-api.krav.trade/krav/v1/overview")
     .then(res => res.data)
-    .catch((error) => console.error(error));
 }
