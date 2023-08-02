@@ -78,7 +78,8 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
         onOpen={handleOpenNavMenu}
         hideBackdrop
         sx={{
-          top: 68
+          top: 68,
+          bottom: 0
         }}
         PaperProps={{
           sx: {
@@ -116,18 +117,15 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
         </Box>
         <Box display={'grid'} justifyItems={'center'} gap={20}>
           <SocialLinks />
-          <Button
-            variant="contained"
-            fullWidth
-            sx={{
-              background: `url(${buttonBgUrl.src})`,
-              backgroundSize: '100% 100%'
-            }}
-          >
-            <Typography variant="h5" whiteSpace={'nowrap'}>
-              Launch App
-            </Typography>
-          </Button>
+          <Button variant="contained" sx={{
+              backgroundSize: '100% !important',
+              backgroundPosition: 'right',
+              cursor: 'auto'
+            }}>
+              <Typography variant="h5" whiteSpace={'nowrap'}>
+                Launch app (coming soon)
+              </Typography>
+            </Button>
         </Box>
       </SwipeableDrawer>
       {/* <Menu
