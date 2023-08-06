@@ -65,14 +65,14 @@ export default function Stats() {
             textAlign={'right'}
             bottom={{ xs: 12, md: 60, lg: 70 }}
           >
-            ${data?.liquiditySupply === undefined ? '--' : (Number(data.liquiditySupply) / 100 ).toFixed(2)}
+            ${data?.liquiditySupply === undefined ? '--' : (Number(data.liquiditySupply) / 10000 ).toFixed(2)}
           </Typography>
         </Box>
         <Box>
           <Rec2 />
           <Typography variant="h5">Volume</Typography>
           <Typography variant="h6" bottom={{ xs: 8, md: 60, lg: 70 }}>
-            ${data?.tradingVolume === undefined ? '--' : (Number(data.tradingVolume) / 100 ).toFixed(2)}
+            ${data?.tradingVolume === undefined ? '--' : (Number(data.tradingVolume) / 10000 ).toFixed(2)}
           </Typography>
         </Box>
         <Box>
