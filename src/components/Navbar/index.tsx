@@ -62,9 +62,13 @@ export default function Navbar() {
                 backgroundSize: '100% !important',
                 backgroundPosition: 'right',
                 cursor: 'auto'
-              }}>
+              }}
+              component="a"
+              href={'https://base.krav.trade/'}
+              target="_blank"
+              >
                 <Typography variant="h5" whiteSpace={'nowrap'}>
-                  Launch app (coming soon)
+                  Launch app
                 </Typography>
               </Button>
             </Stack>

@@ -121,9 +121,13 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
               backgroundSize: '100% !important',
               backgroundPosition: 'right',
               cursor: 'auto'
-            }}>
+            }}
+            component="a"
+            href={'https://base.krav.trade/'}
+            target="_blank"
+            >
               <Typography variant="h5" whiteSpace={'nowrap'}>
-                Launch app (coming soon)
+                Launch app
               </Typography>
             </Button>
         </Box>
