@@ -94,7 +94,7 @@ export default function Stats() {
           <Rec4 />
           <Typography variant="h5">$ AS Collateral</Typography>
           <Typography variant="h6" bottom={{ xs: 18, md: 60, lg: 70 }}>
-            1 <span>Assets</span>
+            4 <span>Assets</span>
           </Typography>
         </Box>
       </Box>
