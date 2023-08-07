@@ -8,6 +8,10 @@ import Pot from './Pot'
 import { useEffect, useState } from 'react'
 import { IOverviewData, getOverview } from '@/fetch'
 
+function addThousandsSeparator(number: number) {
+  return number.toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
 export default function Stats() {
   const [data, setData] = useState<IOverviewData>()
 
@@ -65,14 +69,14 @@ export default function Stats() {
             textAlign={'right'}
             bottom={{ xs: 12, md: 60, lg: 70 }}
           >
-            ${data?.liquiditySupply === undefined ? '--' : (Number(data.liquiditySupply) / 10000 ).toFixed(2)}
+            $ {data?.liquiditySupply === undefined ? '--' : addThousandsSeparator(Number(data.liquiditySupply) / 10000)}
           </Typography>
         </Box>
         <Box>
           <Rec2 />
           <Typography variant="h5">Volume</Typography>
           <Typography variant="h6" bottom={{ xs: 8, md: 60, lg: 70 }}>
-            ${data?.tradingVolume === undefined ? '--' : (Number(data.tradingVolume) / 10000 ).toFixed(2)}
+            $ {data?.tradingVolume === undefined ? '--' : addThousandsSeparator(Number(data.tradingVolume) / 10000)}
           </Typography>
         </Box>
         <Box>
@@ -83,7 +87,8 @@ export default function Stats() {
             textAlign={'right'}
             bottom={{ xs: 18, md: 60, lg: 70 }}
           >
-            {data?.userCount === undefined ? '--' : data.userCount} <span>users</span>
+            {data?.userCount === undefined ? '--' : addThousandsSeparator(Number(data.userCount))}
+            <span> users</span>
           </Typography>
         </Box>
         <Box
