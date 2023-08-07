@@ -120,7 +120,7 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
           <Button variant="contained" sx={{
               backgroundSize: '100% !important',
               backgroundPosition: 'right',
-              cursor: 'auto'
+              cursor: 'pointer'
             }}
             component="a"
             href={'https://base.krav.trade/'}

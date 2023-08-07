@@ -16,7 +16,7 @@ const pages: [string, string][] = [
   // ['COMMUNITY', ''],
   // ['GOVERNANCE', ''],
   ['DOCS', 'https://docs.krav.trade/welcome-to-krav/introduction'],
-  ['Listing Apply', 'https://forms.gle/wiqvg5AES6Lwzgpq9'],
+  ['Listing', 'https://forms.gle/wiqvg5AES6Lwzgpq9'],
 ]
 
 export default function Navbar() {
