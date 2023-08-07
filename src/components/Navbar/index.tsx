@@ -4,16 +4,19 @@ import {
   Box,
   Button,
   Container,
+  Stack,
   Toolbar,
   Typography
 } from '@mui/material'
 import MobileMenu from './MobileMenu'
 import { HideOnMobile, ShowOnMobile } from '@/theme'
+import SocialLinks from '../Footer/SocialLinks'
 
 const pages: [string, string][] = [
   // ['COMMUNITY', ''],
   // ['GOVERNANCE', ''],
-  ['DOCS', 'https://docs.krav.trade/welcome-to-krav/introduction']
+  ['DOCS', 'https://docs.krav.trade/welcome-to-krav/introduction'],
+  ['Listing Apply', 'https://forms.gle/wiqvg5AES6Lwzgpq9'],
 ]
 
 export default function Navbar() {
@@ -52,15 +55,19 @@ export default function Navbar() {
                 <Typography variant="h5"> {page}</Typography>
               </Button>
             ))}
-            <Button variant="contained" sx={{
-              backgroundSize: '100% !important',
-              backgroundPosition: 'right',
-              cursor: 'auto'
-            }}>
-              <Typography variant="h5" whiteSpace={'nowrap'}>
-                Launch app (coming soon)
-              </Typography>
-            </Button>
+            <Stack direction={'row'} spacing={20}>
+              <SocialLinks />
+
+              <Button variant="contained" sx={{
+                backgroundSize: '100% !important',
+                backgroundPosition: 'right',
+                cursor: 'auto'
+              }}>
+                <Typography variant="h5" whiteSpace={'nowrap'}>
+                  Launch app (coming soon)
+                </Typography>
+              </Button>
+            </Stack>
           </Box>
         </Toolbar>
       </Container>

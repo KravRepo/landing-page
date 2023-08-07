@@ -25,7 +25,12 @@ const links = [
     title: 'Telegram',
     icon: TelegramIcon,
     href: 'https://t.me/+tlNZPGwYlu9lOWIx'
-  }
+  },
+  {
+    title: 'Medium',
+    icon: MediumIcon,
+    href: 'https://medium.com/kravtrade'
+  },
 ]
 
 export default function SocialLinks() {
