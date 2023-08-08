@@ -2,6 +2,7 @@ export interface IOverviewData {
   orderPlacement: string;
   liquiditySupply: string;
   tradingVolume: string;
+  fees: string;
   tradingFrequency: number;
   createAt: number;
   userCount: number;

@@ -51,9 +51,15 @@ export default function Navbar() {
                 href={link}
                 target="_blank"
                 key={page}
-                sx={{ my: 2, color: 'white', display: 'flex', gap: 5 }}
+                sx={{ my: 2, color: 'white', display: 'flex', gap: 5, position: 'relative' }}
               >
-                {idx === 0 && <SushiImg />}
+                {idx === 0 && <Box sx={{
+                  position: 'absolute',
+                  right: -6,
+                  top: -6,
+                }}>
+                    <SushiImg />
+                  </Box>}
                 <Typography variant="h5"> {page}</Typography>
               </Button>
             ))}

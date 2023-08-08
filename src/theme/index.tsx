@@ -130,10 +130,12 @@ export const override: (palette: any) => any & {
       },
       contained: {
         background: `url(${buttonBg.src})  no-repeat`,
-        backgroundSize: '100% 100%',
+        // backgroundSize: '100% 100%',
         backgroundColor: 'transparent',
         fontWeight: 700,
         color: palette.text.secondary,
+        backgroundSize: '100% !important',
+        backgroundPosition: 'right',
         boxShadow: 'unset',
         '&:hover, :active': {
           boxShadow: 'unset',
@@ -189,7 +191,7 @@ export const override: (palette: any) => any & {
   }
 })
 
-const FONTS = {
+export const FONTS = {
   title: 'Flexa, Monument Extended, Helvetica, sans-serif',
   content: 'Inter, Lato, Helvetica, sans-serif'
 }
