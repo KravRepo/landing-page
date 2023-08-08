@@ -26,12 +26,18 @@ body {
   font-family: 'Inter';
   font-weight: 400;
   font-style: normal;
-  src: local('Inter-Regular'), url('../assets/fonts/Inter-Regular.ttf') 
+  src: local('Inter-Regular'), url('../assets/fonts/Inter-Regular.ttf')
 }
 
 @font-face {
   font-family: 'Inter';
   font-weight: 500;
   font-style: normal;
-  src: local('Inter-Medium'), url('../assets/fonts/Inter-Medium.ttf') 
+  src: local('Inter-Medium'), url('../assets/fonts/Inter-Medium.ttf')
+}
+
+.MuiPopper-root>.MuiTooltip-tooltip {
+  width: 240px;
+  font-size: 16px;
+  text-align: center;
 }

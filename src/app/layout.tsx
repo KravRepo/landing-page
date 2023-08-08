@@ -3,7 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/theme'
-import { Alert, Typography } from '@mui/material'
+import { Alert, Tooltip, Typography } from '@mui/material'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,9 +29,11 @@ export default function RootLayout({
           }} icon={false} severity="success">
             <Typography color={'#fff'} sx={{fontSize: {xs: 14, sm: 16}}}>
               KRAV token address is {' '}
-              <a style={{color:'#fff'}} target='_blank' href='https://basescan.org/token/0xbE3111856e4acA828593274eA6872f27968C8DD6'>
-                0xbE31....8DD6
-              </a>
+              <Tooltip className='tooltip' arrow title="0xbE3111856e4acA828593274eA6872f27968C8DD6">
+                <a style={{color:'#fff'}} target='_blank' href='https://basescan.org/token/0xbE3111856e4acA828593274eA6872f27968C8DD6'>
+                  0xbE31....8DD6
+                </a>
+              </Tooltip>
               {' '}, follow our{' '}
               <a style={{color:'#fff'}} target='_blank' href='https://twitter.com/kravtrade'>
                 Twitter

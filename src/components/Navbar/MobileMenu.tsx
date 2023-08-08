@@ -12,6 +12,7 @@ import {
 import { useState } from 'react'
 import buttonBgUrl from '@/assets/svg/button_long_bg.svg?url'
 import SocialLinks from '../Footer/SocialLinks'
+import SushiImg from 'src/assets/svg/sushi.svg'
 
 export default function MobileMenu({ pages }: { pages: [string, string][] }) {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
@@ -97,7 +98,7 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
         }}
       >
         <Box component={'ul'} display={'grid'} gap={20}>
-          {pages.map(([page, link]) => (
+          {pages.map(([page, link], idx) => (
             <MenuItem key={page} onClick={handleCloseNavMenu}>
               <Typography
                 textAlign="center"
@@ -106,10 +107,14 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
                 href={link}
                 target="_blank"
                 sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 5,
                   textDecoration: 'none',
                   color: 'inherit'
                 }}
               >
+                {idx === 0 && <SushiImg />}
                 {page}
               </Typography>
             </MenuItem>

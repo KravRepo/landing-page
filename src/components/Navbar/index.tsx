@@ -11,6 +11,7 @@ import {
 import MobileMenu from './MobileMenu'
 import { HideOnMobile, ShowOnMobile } from '@/theme'
 import SocialLinks from '../Footer/SocialLinks'
+import SushiImg from 'src/assets/svg/sushi.svg'
 
 const pages: [string, string][] = [
   // ['COMMUNITY', ''],
@@ -44,14 +45,15 @@ export default function Navbar() {
               gap: 80
             }}
           >
-            {pages.map(([page, link]) => (
+            {pages.map(([page, link], idx) => (
               <Button
                 component="a"
                 href={link}
                 target="_blank"
                 key={page}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'flex', gap: 5 }}
               >
+                {idx === 0 && <SushiImg />}
                 <Typography variant="h5"> {page}</Typography>
               </Button>
             ))}
@@ -61,7 +63,7 @@ export default function Navbar() {
               <Button variant="contained" sx={{
                 backgroundSize: '100% !important',
                 backgroundPosition: 'right',
-                cursor: 'auto'
+                cursor: 'pointer'
               }}
               component="a"
               href={'https://base.krav.trade/'}
