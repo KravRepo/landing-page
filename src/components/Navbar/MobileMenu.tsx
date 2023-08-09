@@ -46,6 +46,7 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
         aria-haspopup="true"
         onClick={anchorElNav ? handleCloseNavMenu : handleOpenNavMenu}
         color="inherit"
+        sx={{position: 'relative', zIndex: 9999}}
       >
         {!anchorElNav ? (
           <svg width="32" height="32" viewBox="0 0 32 32">
