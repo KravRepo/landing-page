@@ -77,7 +77,7 @@ export default function Utils() {
                 <Button variant='contained' component={"a"}
                     href='https://base.krav.trade/trade'  sx={{height: {xs: 32, sm: 52}, width: {xs: 80, sm: 150}, mt: {xs:15, sm: 36}, cursor: 'pointer'}}>
                   <Typography variant='h6' fontWeight={900} sx={{fontSize: {xs: 22, md: 40}}} letterSpacing={'0.8px'}>
-                    Trade
+                    TRADE
                   </Typography>
                 </Button>
               </Box>
