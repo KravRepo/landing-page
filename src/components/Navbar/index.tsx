@@ -15,7 +15,7 @@ import SushiImg from 'src/assets/svg/sushi.svg'
 
 const pages: [string, string][] = [
   // ['COMMUNITY', ''],
-  ['TRADE KRAV', 'https://www.sushi.com/swap?fromChainId=8453&fromCurrency=NATIVE&toChainId=8453&toCurrency=0xbE3111856e4acA828593274eA6872f27968C8DD6'],
+  ['TRADE KRAV', 'https://www.sushi.com/swap?chainId=8453&token0=NATIVE&token1=0xbE3111856e4acA828593274eA6872f27968C8DD6'],
   ['DOCS', 'https://docs.krav.trade/welcome-to-krav/introduction'],
   ['Listing', 'https://forms.gle/wiqvg5AES6Lwzgpq9'],
 ]
