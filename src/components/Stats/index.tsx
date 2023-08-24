@@ -81,13 +81,14 @@ export default function Stats() {
         </Box>
         <Box>
           <Rec3 />
-          <Typography variant="h5">FEES</Typography>
+          <Typography variant="h5">Vekrav</Typography>
           <Typography
             variant="h6"
             textAlign={'right'}
             bottom={{ xs: 18, md: 60, lg: 70 }}
           >
-            $ {data?.fees === undefined ? '--' : addThousandsSeparator(Number(data.fees) / 10000)}
+            Coming soon
+            {/* $ {data?.fees === undefined ? '--' : addThousandsSeparator(Number(data.fees) / 10000)} */}
           </Typography>
         </Box>
         <Box
