@@ -7,7 +7,8 @@ import {
   MenuItem,
   IconButton,
   Button,
-  SwipeableDrawer
+  SwipeableDrawer,
+  ClickAwayListener
 } from '@mui/material'
 import { useState } from 'react'
 import buttonBgUrl from '@/assets/svg/button_long_bg.svg?url'
@@ -117,7 +118,7 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
             background: (theme) => theme.palette.background.default,
             height: 'calc(100vh - 16px)',
             maxHeight: 'unset',
-            padding: '40px 24px 100px',
+            padding: '40px 24px 150px',
             position: 'relative',
             display: 'flex',
             flexDirection: 'column',
@@ -153,61 +154,63 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
         <Box sx={{
           position: 'relative',
         }} display={'grid'} justifyItems={'center'} gap={20}>
-          {isShowMenu && <Box width={236} px={8} display={'flex'} sx={{
-            position: "absolute",
-            bottom: '50px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            borderRadius: '8px',
-            border: '1px solid var(--light-grey-02, #DADADA)',
-            background: '#FFF',
-            boxShadow: "0px 3px 24px 0px rgba(0, 0, 0, 0.06)",
-            zIndex: 99
-          }}>
-            {menuItems.map(item => (
-              <Box component={'a'} sx={menuItemsStyle} key={item.label} href={item.href}>
-                {item.label}
-              </Box>
-            ))}
-          </Box>}
           <SocialLinks />
-          <Box display={'flex'}>
-            <Box sx={{
-              display: 'flex',
-              width: '304px',
-              padding: '4px 8px 4px 10px',
-              justifyContent: 'center',
-              alignItems: 'center',
-              gap: '10px',
-              backgroundSize: '100% !important',
-              backgroundPosition: 'right',
-              cursor: 'pointer',
-              background: '#2832F5',
-              color: '#fff'
-            }
-            }
-              onClick={(e) => { e.stopPropagation(); setIsShowMenu(!isShowMenu) }}
-            >
-              <Typography variant="h5" whiteSpace={'nowrap'}>
-                Launch app
-              </Typography>
-              <Box ml={10} sx={{
-                transform: `${isShowMenu ? 'rotate(60deg)' : ''}`
-              }}>
-                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g id="Frame 1000005658">
-                    <path id="Polygon 11" d="M6 10L0.803849 0.999999L11.1962 1L6 10Z" fill="#fff" />
-                  </g>
-                </svg>
+          <ClickAwayListener onClickAway={()=> setIsShowMenu(false)}>
+            <Box display={'flex'}>
+              <Box sx={{
+                display: 'flex',
+                width: '304px',
+                padding: '4px 8px 4px 10px',
+                justifyContent: 'center',
+                alignItems: 'center',
+                gap: '10px',
+                backgroundSize: '100% !important',
+                backgroundPosition: 'right',
+                cursor: 'pointer',
+                background: '#2832F5',
+                color: '#fff'
+              }
+              }
+                onClick={(e) => { e.stopPropagation(); setIsShowMenu(!isShowMenu) }}
+              >
+                <Typography variant="h5" whiteSpace={'nowrap'}>
+                  Launch app
+                </Typography>
+                <Box ml={10} sx={{
+                  transform: `${isShowMenu ? 'rotate(60deg)' : ''}`
+                }}>
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Frame 1000005658">
+                      <path id="Polygon 11" d="M6 10L0.803849 0.999999L11.1962 1L6 10Z" fill="#fff" />
+                    </g>
+                  </svg>
+                </Box>
               </Box>
+              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="34" viewBox="0 0 8 34" fill="none">
+                <path d="M0 0H8V22L4.20904 28L0.418076 34H0V0Z" fill="#2832F5" />
+              </svg>
+              {isShowMenu && <Box width={236} px={8} display={'flex'} sx={{
+                position: "absolute",
+                bottom: '50px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: '8px',
+                border: '1px solid var(--light-grey-02, #DADADA)',
+                background: '#FFF',
+                boxShadow: "0px 3px 24px 0px rgba(0, 0, 0, 0.06)",
+                zIndex: 99
+              }}>
+              {menuItems.map(item => (
+                <Box component={'a'} sx={menuItemsStyle} key={item.label} href={item.href}>
+                  {item.label}
+                </Box>
+              ))}
+              </Box>}
             </Box>
-            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="34" viewBox="0 0 8 34" fill="none">
-              <path d="M0 0H8V22L4.20904 28L0.418076 34H0V0Z" fill="#2832F5" />
-            </svg>
-          </Box>
+          </ClickAwayListener>
 
         </Box>
       </SwipeableDrawer>

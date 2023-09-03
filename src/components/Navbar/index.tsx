@@ -4,6 +4,7 @@ import {
   AppBar,
   Box,
   Button,
+  ClickAwayListener,
   Container,
   Stack,
   Toolbar,
@@ -112,87 +113,91 @@ export default function Navbar() {
             <Stack direction={'row'} spacing={20}>
               <SocialLinks />
 
-              <Button
-                variant="contained"
-                sx={{
-                  backgroundSize: '100% !important',
-                  backgroundPosition: 'right',
-                  cursor: 'pointer'
-                }}
-                onMouseEnter={() => {
-                  setIsMoveOnButton(true);
-                }}
-                onMouseLeave={() => {
-                  setIsMoveOnButton(false);
-                }}
-                onClick={() => {
-                  setIsShowMenu(!isShowMenu);
-                }}
-              >
-                <Typography variant="h5" whiteSpace={'nowrap'}>
-                  Launch app
-                </Typography>
-                <Box
-                  ml={10}
-                  className="arrow"
-                  sx={{
-                    transform: `${isShowMenu ? 'rotate(60deg)' : ''
-                      }`
-                  }}
-                >
-                  <svg
-                    width="12"
-                    height="10"
-                    viewBox="0 0 12 10"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+              <ClickAwayListener onClickAway={()=> setIsShowMenu(false)}>
+                <Box>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      backgroundSize: '100% !important',
+                      backgroundPosition: 'right',
+                      cursor: 'pointer'
+                    }}
+                    onMouseEnter={() => {
+                      setIsMoveOnButton(true);
+                    }}
+                    onMouseLeave={() => {
+                      setIsMoveOnButton(false);
+                    }}
+                    onClick={() => {
+                      setIsShowMenu(!isShowMenu);
+                    }}
                   >
-                    <g id="Frame 1000005658">
-                      <path
-                        id="Polygon 11"
-                        d="M6 10L0.803849 0.999999L11.1962 1L6 10Z"
-                        fill={
-                          isMoveOnButton
-                            ? '#000'
-                            : '#fff'
-                        }
-                      />
-                    </g>
-                  </svg>
-                </Box>
-              </Button>
-              {isShowMenu && (
-                <Box
-                  width={236}
-                  px={8}
-                  display={'flex'}
-                  sx={{
-                    position: 'absolute',
-                    top: '64px',
-                    right: 0,
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    borderRadius: '8px',
-                    border: '1px solid var(--light-grey-02, #DADADA)',
-                    background: '#FFF',
-                    boxShadow:
-                      '0px 3px 24px 0px rgba(0, 0, 0, 0.06)',
-                    zIndex: 99
-                  }}
-                >
-                  {menuItems.map(item => (
+                    <Typography variant="h5" whiteSpace={'nowrap'}>
+                      Launch app
+                    </Typography>
                     <Box
-                      component={'a'}
-                      sx={menuItemsStyle}
-                      key={item.label}
-                      href={item.href}
+                      ml={10}
+                      className="arrow"
+                      sx={{
+                        transform: `${isShowMenu ? 'rotate(60deg)' : ''
+                          }`
+                      }}
                     >
-                      {item.label}
+                      <svg
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="Frame 1000005658">
+                          <path
+                            id="Polygon 11"
+                            d="M6 10L0.803849 0.999999L11.1962 1L6 10Z"
+                            fill={
+                              isMoveOnButton
+                                ? '#000'
+                                : '#fff'
+                            }
+                          />
+                        </g>
+                      </svg>
                     </Box>
-                  ))}
+                  </Button>
+                  {isShowMenu && (
+                    <Box
+                      width={236}
+                      px={8}
+                      display={'flex'}
+                      sx={{
+                        position: 'absolute',
+                        top: '64px',
+                        right: 0,
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        borderRadius: '8px',
+                        border: '1px solid var(--light-grey-02, #DADADA)',
+                        background: '#FFF',
+                        boxShadow:
+                          '0px 3px 24px 0px rgba(0, 0, 0, 0.06)',
+                        zIndex: 99
+                      }}
+                    >
+                      {menuItems.map(item => (
+                        <Box
+                          component={'a'}
+                          sx={menuItemsStyle}
+                          key={item.label}
+                          href={item.href}
+                        >
+                          {item.label}
+                        </Box>
+                      ))}
+                    </Box>
+                  )}
                 </Box>
-              )}
+              </ClickAwayListener>
             </Stack>
           </Box>
         </Toolbar>
