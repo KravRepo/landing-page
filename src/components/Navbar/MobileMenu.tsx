@@ -118,7 +118,7 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
             background: (theme) => theme.palette.background.default,
             height: 'calc(100vh - 16px)',
             maxHeight: 'unset',
-            padding: '40px 24px 150px',
+            padding: '40px 24px 200px',
             position: 'relative',
             display: 'flex',
             flexDirection: 'column',
