@@ -7,7 +7,8 @@ import {
   Container,
   Stack,
   Toolbar,
-  Typography
+  Typography,
+  Popover
 } from '@mui/material';
 import MobileMenu from './MobileMenu';
 import { HideOnMobile, ShowOnMobile } from '@/theme';
@@ -15,8 +16,7 @@ import SocialLinks from '../Footer/SocialLinks';
 import SushiImg from 'src/assets/svg/sushi.svg';
 import Arrow from 'src/assets/svg/arrow.svg';
 import { useState } from 'react';
-import Link from 'next/link';
-import zIndex from '@mui/material/styles/zIndex';
+import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 
 const pages: [string, string][] = [
   // ['COMMUNITY', ''],
@@ -111,88 +111,88 @@ export default function Navbar() {
             ))}
             <Stack direction={'row'} spacing={20}>
               <SocialLinks />
-
-              <Button
-                variant="contained"
-                sx={{
-                  backgroundSize: '100% !important',
-                  backgroundPosition: 'right',
-                  cursor: 'pointer'
-                }}
-                onMouseEnter={() => {
-                  setIsMoveOnButton(true);
-                }}
-                onMouseLeave={() => {
-                  setIsMoveOnButton(false);
-                }}
-                onClick={() => {
-                  setIsShowMenu(!isShowMenu);
-                }}
-              >
-                <Typography variant="h5" whiteSpace={'nowrap'}>
-                  Launch app
-                </Typography>
-                <Box
-                  ml={10}
-                  className="arrow"
-                  sx={{
-                    transform: `${isShowMenu ? 'rotate(60deg)' : ''
-                      }`
-                  }}
-                >
-                  <svg
-                    width="12"
-                    height="10"
-                    viewBox="0 0 12 10"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g id="Frame 1000005658">
-                      <path
-                        id="Polygon 11"
-                        d="M6 10L0.803849 0.999999L11.1962 1L6 10Z"
-                        fill={
-                          isMoveOnButton
-                            ? '#000'
-                            : '#fff'
-                        }
-                      />
-                    </g>
-                  </svg>
-                </Box>
-              </Button>
-              {isShowMenu && (
-                <Box
-                  width={236}
-                  px={8}
-                  display={'flex'}
-                  sx={{
-                    position: 'absolute',
-                    top: '64px',
-                    right: 0,
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    borderRadius: '8px',
-                    border: '1px solid var(--light-grey-02, #DADADA)',
-                    background: '#FFF',
-                    boxShadow:
-                      '0px 3px 24px 0px rgba(0, 0, 0, 0.06)',
-                    zIndex: 99
-                  }}
-                >
-                  {menuItems.map(item => (
-                    <Box
-                      component={'a'}
-                      sx={menuItemsStyle}
-                      key={item.label}
-                      href={item.href}
-                    >
-                      {item.label}
-                    </Box>
-                  ))}
-                </Box>
-              )}
+              <PopupState variant="popover" popupId="popup-menu">
+                {(popupState) => {
+                  return (
+                    <>
+                      <Button
+                        {...bindTrigger(popupState)}
+                        variant="contained"
+                        sx={{
+                          backgroundSize: '100% !important',
+                          backgroundPosition: 'right',
+                          cursor: 'pointer'
+                        }}
+                        onMouseEnter={() => {
+                          setIsMoveOnButton(true);
+                        }}
+                        onMouseLeave={() => {
+                          setIsMoveOnButton(false);
+                        }}
+                      >
+                        <Typography variant="h5" whiteSpace={'nowrap'}>
+                          Launch app
+                        </Typography>
+                        <Box
+                          ml={10}
+                          className="arrow"
+                          sx={{
+                            transform: `${popupState.isOpen ? 'rotate(60deg)' : ''
+                              }`
+                          }}
+                        >
+                          <svg
+                            width="12"
+                            height="10"
+                            viewBox="0 0 12 10"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g id="Frame 1000005658">
+                              <path
+                                id="Polygon 11"
+                                d="M6 10L0.803849 0.999999L11.1962 1L6 10Z"
+                                fill={
+                                  isMoveOnButton
+                                    ? '#000'
+                                    : '#fff'
+                                }
+                              />
+                            </g>
+                          </svg>
+                        </Box>
+                      </Button>
+                      <Popover
+                        {...bindMenu(popupState)}
+                        sx={{
+                          transform:'translateY(12px)'
+                        }}
+                        anchorOrigin={{
+                          vertical: 'bottom',
+                          horizontal: 'right',
+                        }}
+                        transformOrigin={{
+                          vertical: 'top',
+                          horizontal: 'right',
+                        }}
+                      >
+                        {menuItems.map(item => (
+                          <Box
+                            component={'a'}
+                            sx={menuItemsStyle}
+                            key={item.label}
+                            href={item.href}
+                            onClick={popupState.close}
+                          >
+                            {item.label}
+                          </Box>
+                        ))}
+                      </Popover>
+                    </>
+                  )
+                }
+                }
+              </PopupState>
             </Stack>
           </Box>
         </Toolbar>
