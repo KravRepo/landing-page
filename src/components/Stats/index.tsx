@@ -6,7 +6,7 @@ import Rec3 from '@/assets/svg/rectangle3.svg'
 import Rec4 from '@/assets/svg/rectangle4.svg'
 import Pot from './Pot'
 import { useEffect, useState } from 'react'
-import { IOverviewData, getOverview } from '@/fetch'
+import { IOverviewData, getOverview, getStaking } from '@/fetch'
 
 function addThousandsSeparator(number: number) {
   return number.toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -14,12 +14,22 @@ function addThousandsSeparator(number: number) {
 
 export default function Stats() {
   const [data, setData] = useState<IOverviewData>()
+  const [staking, setStaking] = useState<string>()
 
   useEffect(() => {
     const getData = async ()=> {
       const ret = await getOverview()
       if (!ret) return
       setData(ret)
+    }
+    getData()
+  }, [])
+
+  useEffect(() => {
+    const getData = async ()=> {
+      const ret = await getStaking()
+      if (!ret) return
+      setStaking((BigInt(ret) / BigInt(1e18)).toLocaleString())
     }
     getData()
   }, [])
@@ -81,13 +91,13 @@ export default function Stats() {
         </Box>
         <Box>
           <Rec3 />
-          <Typography variant="h5">Vekrav</Typography>
+          <Typography variant="h5">Staking</Typography>
           <Typography
             variant="h6"
             textAlign={'right'}
             bottom={{ xs: 18, md: 60, lg: 70 }}
           >
-            Coming soon
+            {staking || '--'} <Typography variant='h6' component={'span'} sx={{ fontSize: {md: 36, xs: 20}, fontWeight: 600 }}>KRAV</Typography>
             {/* $ {data?.fees === undefined ? '--' : addThousandsSeparator(Number(data.fees) / 10000)} */}
           </Typography>
         </Box>

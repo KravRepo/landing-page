@@ -45,9 +45,9 @@ export default function Utils() {
                   EARN REAL-YIELD BY STAKING ANY ALTCOIN
                 </Typography>
                 <Button variant='contained' component={"a"}
-                    href='https://base.krav.trade/portfolio/stake' sx={{height: {xs: 32, sm: 52}, width: {xs: 80, sm: 150}, mt: {xs:15, sm: 36}, cursor: 'pointer'}}>
+                    href='https://base.krav.trade/liquidity' sx={{height: {xs: 32, sm: 52}, width: {xs: 140, sm: 240}, mt: {xs:15, sm: 36}, cursor: 'pointer'}}>
                   <Typography variant='h6' fontWeight={900} sx={{fontSize: {xs: 22, sm: 40}}} letterSpacing={'0.8px'}>
-                    STAKE
+                    ADD LIQUIDITY
                   </Typography>
                 </Button>
               </Box>
@@ -118,9 +118,9 @@ export default function Utils() {
                   KRAV IS THE UTILITY AND GOVERNANCE TOKEN. ACCRUES PLATFORM’S GENERATED FEES IF LOCKED FOR VEKRAV
                 </Typography>
                 <Button variant='contained' component={"a"}
-                    href='https://base.krav.trade/liquidity' sx={{height: {xs: 32, sm: 52}, width: {xs: 80, sm: 150}, mt: {xs:15, sm: 36}, cursor: 'pointer'}}>
+                    href='https://base.krav.trade/portfolio/stake' sx={{height: {xs: 32, sm: 52}, width: {xs: 80, sm: 150}, mt: {xs:15, sm: 36}, cursor: 'pointer'}}>
                   <Typography variant='h6' fontWeight={900} sx={{fontSize: {xs: 22, md: 40}}} letterSpacing={'0.8px'}>
-                    LOCK
+                    STAKE
                   </Typography>
                 </Button>
               </Box>
