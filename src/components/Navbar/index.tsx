@@ -116,26 +116,27 @@ export default function Navbar() {
               <ClickAwayListener onClickAway={()=> setIsShowMenu(false)}>
                 <Box>
                   <Button
+                    onClick={()=> window.open('https://app.krav.trade')}
                     variant="contained"
                     sx={{
                       backgroundSize: '100% !important',
                       backgroundPosition: 'right',
                       cursor: 'pointer'
                     }}
-                    onMouseEnter={() => {
-                      setIsMoveOnButton(true);
-                    }}
-                    onMouseLeave={() => {
-                      setIsMoveOnButton(false);
-                    }}
-                    onClick={() => {
-                      setIsShowMenu(!isShowMenu);
-                    }}
+                    // onMouseEnter={() => {
+                    //   setIsMoveOnButton(true);
+                    // }}
+                    // onMouseLeave={() => {
+                    //   setIsMoveOnButton(false);
+                    // }}
+                    // onClick={() => {
+                    //   setIsShowMenu(!isShowMenu);
+                    // }}
                   >
                     <Typography variant="h5" whiteSpace={'nowrap'}>
                       Launch app
                     </Typography>
-                    <Box
+                    {/* <Box
                       ml={10}
                       className="arrow"
                       sx={{
@@ -162,7 +163,7 @@ export default function Navbar() {
                           />
                         </g>
                       </svg>
-                    </Box>
+                    </Box> */}
                   </Button>
                   {isShowMenu && (
                     <Box
