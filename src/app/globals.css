@@ -19,7 +19,7 @@ body {
   font-family: 'Flexa';
   font-weight: 900;
   font-style: normal;
-  src: url('https://static.krav.trade/fonts/GT-Flexa-X-Compressed-Black.otf');
+  src: url('https://api.krav.trade/fonts/GT-Flexa-X-Compressed-Black.otf');
 }
 
 @font-face {
