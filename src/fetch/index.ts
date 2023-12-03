@@ -19,7 +19,7 @@ const request = <T>(url: string, options?: any): Promise<T> => {
 }
 
 export function getOverview() {
-  return request<{data: IOverviewData}>("https://base-api.krav.trade/krav/v1/overview")
+  return request<{data: IOverviewData}>("https://api.krav.trade/krav/v1/overview")
     .then(res => res.data)
 }
 
