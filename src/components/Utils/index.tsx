@@ -21,7 +21,7 @@ export default function Utils() {
     <Box>
       <Box
         mt={100}
-        sx={{mb: {xs: 50, sm: 170}}}
+        sx={{ mb: { xs: 50, sm: 170 } }}
         position={'relative'}
         display={'grid'}
         gridTemplateColumns={{ xs: '100%', md: '50% 50%' }}
@@ -32,29 +32,47 @@ export default function Utils() {
           padding={{ xs: '40px 24px 60px', md: '72px 90px 100px' }}
           borderBottom={{ xs: '1px solid #000000', md: 'none' }}
           borderRight={{ xs: undefined, md: '1px solid #000000' }}
-          sx={{height: {xs: 312, sm: 720}}}
+          sx={{ height: { xs: 312, sm: 720 } }}
           display={'grid'}
         >
           <Box
             display={'grid'}
-            sx={{justifyItems: {sm: 'center', xs: 'left'}}}
+            sx={{ justifyItems: { sm: 'center', xs: 'left' } }}
             maxWidth={510}
-            >
-              <Box>
-                <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
-                  EARN REAL-YIELD BY STAKING ANY ALTCOIN
+          >
+            <Box>
+              <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
+                EARN REAL-YIELD BY STAKING ANY ALTCOIN
+              </Typography>
+              <Button
+                variant="contained"
+                component={'a'}
+                href="https://base.krav.trade/liquidity"
+                sx={{
+                  height: { xs: 32, sm: 52 },
+                  width: { xs: 140, sm: 240 },
+                  mt: { xs: 15, sm: 36 },
+                  cursor: 'pointer'
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  fontWeight={900}
+                  sx={{ fontSize: { xs: 22, sm: 40 } }}
+                  letterSpacing={'0.8px'}
+                >
+                  ADD LIQUIDITY
                 </Typography>
-                <Button variant='contained' component={"a"}
-                    href='https://base.krav.trade/liquidity' sx={{height: {xs: 32, sm: 52}, width: {xs: 140, sm: 240}, mt: {xs:15, sm: 36}, cursor: 'pointer'}}>
-                  <Typography variant='h6' fontWeight={900} sx={{fontSize: {xs: 22, sm: 40}}} letterSpacing={'0.8px'}>
-                    ADD LIQUIDITY
-                  </Typography>
-                </Button>
-              </Box>
+              </Button>
+            </Box>
           </Box>
           <Box pr={30} justifySelf="right" alignSelf="flex-end" maxWidth={510}>
-            <HideOnMobile><StakeImg /></HideOnMobile>
-            <ShowOnMobile><StakeMobileImg /></ShowOnMobile>
+            <HideOnMobile>
+              <StakeImg />
+            </HideOnMobile>
+            <ShowOnMobile>
+              <StakeMobileImg />
+            </ShowOnMobile>
           </Box>
         </Box>
 
@@ -62,72 +80,124 @@ export default function Utils() {
           padding={{ xs: '40px 24px 40px', md: '72px 90px 100px' }}
           borderBottom={{ xs: '1px solid #000000', md: 'none' }}
           borderRight={{ xs: undefined, md: '1px solid #000000' }}
-          sx={{height: {xs: 312, sm: 720}}}
+          sx={{ height: { xs: 312, sm: 720 } }}
           display={'grid'}
         >
           <Box
             display={'grid'}
-            sx={{justifyItems: {sm: 'center', xs: 'left'}}}
+            sx={{ justifyItems: { sm: 'center', xs: 'left' } }}
             maxWidth={510}
-            >
-              <Box>
-                <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
-                  TRADE BTC USING ANY ALTCOIN AS <br /> COLLATERAL
+          >
+            <Box>
+              <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
+                TRADE BTC USING ANY ALTCOIN AS <br /> COLLATERAL
+              </Typography>
+              <Button
+                variant="contained"
+                component={'a'}
+                href="https://base.krav.trade/trade"
+                sx={{
+                  height: { xs: 32, sm: 52 },
+                  width: { xs: 80, sm: 150 },
+                  mt: { xs: 15, sm: 36 },
+                  cursor: 'pointer'
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  fontWeight={900}
+                  sx={{ fontSize: { xs: 22, md: 40 } }}
+                  letterSpacing={'0.8px'}
+                >
+                  TRADE
                 </Typography>
-                <Button variant='contained' component={"a"}
-                    href='https://base.krav.trade/trade'  sx={{height: {xs: 32, sm: 52}, width: {xs: 80, sm: 150}, mt: {xs:15, sm: 36}, cursor: 'pointer'}}>
-                  <Typography variant='h6' fontWeight={900} sx={{fontSize: {xs: 22, md: 40}}} letterSpacing={'0.8px'}>
-                    TRADE
-                  </Typography>
-                </Button>
-              </Box>
+              </Button>
+            </Box>
           </Box>
           <Box pr={30} justifySelf="right" alignSelf="flex-end">
-            <HideOnMobile><TradeImg /></HideOnMobile>
-            <ShowOnMobile><TradeMobileImg /></ShowOnMobile>
+            <HideOnMobile>
+              <TradeImg />
+            </HideOnMobile>
+            <ShowOnMobile>
+              <TradeMobileImg />
+            </ShowOnMobile>
           </Box>
         </Box>
 
         <HideOnMobile>
-          <Box sx={{
-            left: 'calc(50% - 40px)',
-            top: -40,
-            ...styleCenter
-          }}>
+          <Box
+            sx={{
+              left: 'calc(50% - 40px)',
+              top: -40,
+              ...styleCenter
+            }}
+          >
             <Img1 />
           </Box>
 
-          <Box sx={{
-            left: 'calc(50% - 122px)',
-            bottom: -122,
-            ...styleCenter
-          }}>
+          <Box
+            sx={{
+              left: 'calc(50% - 122px)',
+              bottom: -122,
+              ...styleCenter
+            }}
+          >
             <Img2 />
           </Box>
         </HideOnMobile>
       </Box>
 
-      <Box maxWidth={1248} sx={{padding: {xs:"0 24px 10px 24px", sm: '0 10px 170px 10px'}}} margin={'auto'}>
-        <Box display={'grid'} sx={{gridTemplateColumns: {sm: '1fr 180px', xs: '1fr'}}} gap={68}>
+      <Box
+        maxWidth={1248}
+        sx={{ padding: { xs: '0 24px 10px 24px', sm: '0 10px 170px 10px' } }}
+        margin={'auto'}
+      >
+        <Box
+          display={'grid'}
+          sx={{ gridTemplateColumns: { sm: '1fr 180px', xs: '1fr' } }}
+          gap={68}
+        >
           <Box
             display={'grid'}
-            sx={{justifyItems: {sm: 'center', xs: 'left'}}}
-            >
-              <Box>
-                <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
-                  KRAV IS THE UTILITY AND GOVERNANCE TOKEN. ACCRUES PLATFORM’S GENERATED FEES IF LOCKED FOR VEKRAV
+            sx={{ justifyItems: { sm: 'center', xs: 'left' } }}
+          >
+            <Box>
+              <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
+                KRAV is being revamped! We&apos;re rolling out a brand-new
+                governance and utility KRAV token, requiring all current KRAV
+                tokens to be burned and replaced. For more details, visit
+                kravtrade on twitter. Minting date for the new token will be
+                announced soon. Stake to burn and be eligible for new mint!
+              </Typography>
+              <Button
+                variant="contained"
+                component={'a'}
+                href="https://base.krav.trade/portfolio/stake"
+                sx={{
+                  height: { xs: 32, sm: 52 },
+                  width: { xs: 80, sm: 150 },
+                  mt: { xs: 15, sm: 36 },
+                  cursor: 'pointer'
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  fontWeight={900}
+                  sx={{ fontSize: { xs: 22, md: 40 } }}
+                  letterSpacing={'0.8px'}
+                >
+                  STAKE
                 </Typography>
-                <Button variant='contained' component={"a"}
-                    href='https://base.krav.trade/portfolio/stake' sx={{height: {xs: 32, sm: 52}, width: {xs: 80, sm: 150}, mt: {xs:15, sm: 36}, cursor: 'pointer'}}>
-                  <Typography variant='h6' fontWeight={900} sx={{fontSize: {xs: 22, md: 40}}} letterSpacing={'0.8px'}>
-                    STAKE
-                  </Typography>
-                </Button>
-              </Box>
+              </Button>
+            </Box>
           </Box>
           <Box pb={20} pr={30} justifySelf="right" alignSelf="flex-end">
-            <HideOnMobile><LockImg /></HideOnMobile>
-            <ShowOnMobile><LockMobileImg /></ShowOnMobile>
+            <HideOnMobile>
+              <LockImg />
+            </HideOnMobile>
+            <ShowOnMobile>
+              <LockMobileImg />
+            </ShowOnMobile>
           </Box>
         </Box>
       </Box>
