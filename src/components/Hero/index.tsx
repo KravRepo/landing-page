@@ -7,9 +7,9 @@ import headUrl from '@/assets/svg/head.svg?url'
 import Img from '../Image/image'
 import { HideOnMobile, ShowOnMobile } from '@/theme'
 
-const title = 'Trade BTC with \nleverage using any \naltcoin as \ncollateral'
-const subtitle =
-  'Krav is a next generation decentralized quanto \nperpetual exchange.'
+const title =
+  'Trade BTC \nPerpetual Futures, \nLeveraging Any\n Altcoin as \nCollateral'
+const subtitle = 'Krav - The Pioneer Quanto Exchange'
 
 export default function Hero() {
   return (

@@ -42,15 +42,15 @@ export default function Utils() {
           >
             <Box>
               <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
-                EARN REAL-YIELD BY STAKING ANY ALTCOIN
+                BTC Perpetuals - with Altcoins !
               </Typography>
               <Button
                 variant="contained"
                 component={'a'}
-                href="https://base.krav.trade/liquidity"
+                href="https://base.krav.trade/trade"
                 sx={{
                   height: { xs: 32, sm: 52 },
-                  width: { xs: 140, sm: 240 },
+                  width: { xs: 80, sm: 150 },
                   mt: { xs: 15, sm: 36 },
                   cursor: 'pointer'
                 }}
@@ -58,10 +58,10 @@ export default function Utils() {
                 <Typography
                   variant="h6"
                   fontWeight={900}
-                  sx={{ fontSize: { xs: 22, sm: 40 } }}
+                  sx={{ fontSize: { xs: 22, md: 40 } }}
                   letterSpacing={'0.8px'}
                 >
-                  ADD LIQUIDITY
+                  TRADE
                 </Typography>
               </Button>
             </Box>
@@ -90,15 +90,15 @@ export default function Utils() {
           >
             <Box>
               <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
-                TRADE BTC USING ANY ALTCOIN AS <br /> COLLATERAL
-              </Typography>
+                Earn Yield on ANY Altcoin!
+              </Typography>{' '}
               <Button
                 variant="contained"
                 component={'a'}
-                href="https://base.krav.trade/trade"
+                href="https://base.krav.trade/liquidity"
                 sx={{
                   height: { xs: 32, sm: 52 },
-                  width: { xs: 80, sm: 150 },
+                  width: { xs: 140, sm: 240 },
                   mt: { xs: 15, sm: 36 },
                   cursor: 'pointer'
                 }}
@@ -106,10 +106,10 @@ export default function Utils() {
                 <Typography
                   variant="h6"
                   fontWeight={900}
-                  sx={{ fontSize: { xs: 22, md: 40 } }}
+                  sx={{ fontSize: { xs: 22, sm: 40 } }}
                   letterSpacing={'0.8px'}
                 >
-                  TRADE
+                  ADD LIQUIDITY
                 </Typography>
               </Button>
             </Box>
@@ -162,17 +162,24 @@ export default function Utils() {
             sx={{ justifyItems: { sm: 'center', xs: 'left' } }}
           >
             <Box>
-              <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
-                KRAV is being revamped! We&apos;re rolling out a brand-new
-                governance and utility KRAV token, requiring all current KRAV
-                tokens to be burned and replaced. For more details, visit
-                kravtrade on twitter. Minting date for the new token will be
-                announced soon. Stake to burn and be eligible for new mint!
+              <Typography
+                variant="h5"
+                fontSize={{ xs: 32, md: 64 }}
+                mb={'20px'}
+              >
+                KRAV IS BEING REVAMPED!{' '}
+              </Typography>
+              <Typography variant="h5" fontSize={{ xs: 24, md: 40 }}>
+                WE&apos;RE ROLLING OUT A BRAND-NEW GOVERNANCE AND UTILITY KRAV
+                TOKEN, REQUIRING ALL CURRENT KRAV TOKENS TO BE BURNED AND
+                REPLACED. FOR MORE DETAILS, VISIT KRAVTRADE ON TWITTER. MINTING
+                DATE FOR THE NEW TOKEN WILL BE ANNOUNCED SOON. STAKE TO BURN AND
+                BE ELIGIBLE FOR NEW MINT!
               </Typography>
               <Button
                 variant="contained"
                 component={'a'}
-                href="https://base.krav.trade/portfolio/stake"
+                href="https://app.krav.trade/exchange"
                 sx={{
                   height: { xs: 32, sm: 52 },
                   width: { xs: 80, sm: 150 },

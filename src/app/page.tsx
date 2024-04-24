@@ -8,6 +8,7 @@ import MarqueeBlue from '@/components/Marquee/MarqueeBlue'
 import Explaination1 from '@/components/Explaination/Explaination1'
 import Explaination2 from '@/components/Explaination/Explaination2'
 import Bottom from '@/components/Bottom'
+import FAQ from '@/components/FAQ'
 
 export default function Home() {
   return (
@@ -45,9 +46,10 @@ export default function Home() {
         minHeight={'100vh'}
         gap={{ xs: 42, sm: 62, md: 100 }}
       >
-        <Explaination1 />
+        <FAQ />
+        {/* <Explaination1 />
         <Marquee2 />
-        <Explaination2 />
+        <Explaination2 /> */}
       </Box>
       <Bottom />
     </Box>
