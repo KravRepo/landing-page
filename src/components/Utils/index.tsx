@@ -32,17 +32,21 @@ export default function Utils() {
           padding={{ xs: '40px 24px 60px', md: '72px 90px 100px' }}
           borderBottom={{ xs: '1px solid #000000', md: 'none' }}
           borderRight={{ xs: undefined, md: '1px solid #000000' }}
-          sx={{ height: { xs: 312, sm: 720 } }}
+          sx={{ height: { xs: 420, md: 720 } }}
           display={'grid'}
         >
           <Box
             display={'grid'}
             sx={{ justifyItems: { sm: 'center', xs: 'left' } }}
-            maxWidth={510}
+            maxWidth={720}
           >
-            <Box>
+            <Box display={'grid'} gap={{ xs: '24px', md: '18px' }}>
               <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
                 BTC Perpetuals - with Altcoins !
+              </Typography>
+              <Typography fontFamily={'sans-serif'}>
+                Use Any Altcoin as collateral for perpetual Futures with PnL
+                settlement in the same token!
               </Typography>
               <Button
                 variant="contained"
@@ -80,18 +84,22 @@ export default function Utils() {
           padding={{ xs: '40px 24px 40px', md: '72px 90px 100px' }}
           borderBottom={{ xs: '1px solid #000000', md: 'none' }}
           borderRight={{ xs: undefined, md: '1px solid #000000' }}
-          sx={{ height: { xs: 312, sm: 720 } }}
+          sx={{ height: { xs: 420, md: 720 } }}
           display={'grid'}
         >
           <Box
             display={'grid'}
             sx={{ justifyItems: { sm: 'center', xs: 'left' } }}
-            maxWidth={510}
+            maxWidth={720}
           >
-            <Box>
+            <Box display={'grid'} gap={{ xs: '24px', md: '18px' }}>
               <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
                 Earn Yield on ANY Altcoin!
-              </Typography>{' '}
+              </Typography>
+              <Typography fontFamily={'sans-serif'}>
+                Deposit Altcoins into Krav's single token LP and earn real
+                yield. Don't see yours? create A NEw LP In MInutes.
+              </Typography>
               <Button
                 variant="contained"
                 component={'a'}
@@ -165,16 +173,16 @@ export default function Utils() {
               <Typography
                 variant="h5"
                 fontSize={{ xs: 32, md: 64 }}
-                mb={'20px'}
+                mb={'32px'}
               >
                 KRAV IS BEING REVAMPED!{' '}
               </Typography>
-              <Typography variant="h5" fontSize={{ xs: 24, md: 40 }}>
-                WE&apos;RE ROLLING OUT A BRAND-NEW GOVERNANCE AND UTILITY KRAV
-                TOKEN, REQUIRING ALL CURRENT KRAV TOKENS TO BE BURNED AND
-                REPLACED. FOR MORE DETAILS, VISIT KRAVTRADE ON TWITTER. MINTING
-                DATE FOR THE NEW TOKEN WILL BE ANNOUNCED SOON. STAKE TO BURN AND
-                BE ELIGIBLE FOR NEW MINT!
+              <Typography fontSize={{ xs: 16, md: 24 }}>
+                We&apos;re rolling out a brand-new governance and utility krav
+                Token, requiring all current krav tokens to be burned and
+                Replaced. For more details, visit kravtrade on twitter. Minting
+                Date for the new token will be announced soon. Stake to burn and
+                Be eligible for new mint!
               </Typography>
               <Button
                 variant="contained"
