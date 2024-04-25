@@ -97,8 +97,8 @@ export default function Utils() {
                 Earn Yield on ANY Altcoin!
               </Typography>
               <Typography fontFamily={'sans-serif'}>
-                Deposit Altcoins into Krav's single token LP and earn real
-                yield. Don't see yours? create A NEw LP In MInutes.
+                Deposit Altcoins into Krav&apos;s single token LP and earn real
+                yield. Don&apos;t see yours? create A NEw LP In MInutes.
               </Typography>
               <Button
                 variant="contained"
