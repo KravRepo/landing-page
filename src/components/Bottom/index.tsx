@@ -11,7 +11,7 @@ export default function Bottom() {
     <Box id="bottom">
       <MarqueeBlue />
       <AvailableNetwork />
-      <Slides />
+      {/* <Slides /> */}
       <AuditedBy />
       <Connect />
       <Footer />

@@ -44,7 +44,12 @@ export default function Utils() {
               <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
                 BTC Perpetuals - with Altcoins !
               </Typography>
-              <Typography fontFamily={'sans-serif'}>
+              <Typography
+                fontFamily={'sans-serif'}
+                sx={{
+                  textTransform: 'uppercase'
+                }}
+              >
                 Use Any Altcoin as collateral for perpetual Futures with PnL
                 settlement in the same token!
               </Typography>
@@ -96,7 +101,12 @@ export default function Utils() {
               <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
                 Earn Yield on ANY Altcoin!
               </Typography>
-              <Typography fontFamily={'sans-serif'}>
+              <Typography
+                fontFamily={'sans-serif'}
+                sx={{
+                  textTransform: 'uppercase'
+                }}
+              >
                 Deposit Altcoins into Krav&apos;s single token LP and earn real
                 yield. Don&apos;t see yours? create A NEw LP In MInutes.
               </Typography>
@@ -177,7 +187,10 @@ export default function Utils() {
               >
                 KRAV IS BEING REVAMPED!{' '}
               </Typography>
-              <Typography fontSize={{ xs: 16, md: 24 }}>
+              <Typography
+                fontSize={{ xs: 16, md: 24 }}
+                sx={{ textTransform: 'uppercase' }}
+              >
                 We&apos;re rolling out a brand-new governance and utility krav
                 Token, requiring all current krav tokens to be burned and
                 Replaced. For more details, visit kravtrade on twitter. Minting
