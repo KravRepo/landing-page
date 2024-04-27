@@ -50,7 +50,7 @@ export default function Utils() {
                   textTransform: 'uppercase'
                 }}
               >
-                Use Any Altcoin as collateral for perpetual Futures with PnL
+                Use Any altcoin as collateral for perpetual Futures with PnL
                 settlement in the same token!
               </Typography>
               <Button
@@ -107,7 +107,7 @@ export default function Utils() {
                   textTransform: 'uppercase'
                 }}
               >
-                Deposit Altcoins into Krav&apos;s single token LP and earn real
+                Deposit altcoins into Krav&apos;s single token LP and earn real
                 yield. Don&apos;t see yours? create A NEw LP In MInutes.
               </Typography>
               <Button

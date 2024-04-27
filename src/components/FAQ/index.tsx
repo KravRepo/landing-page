@@ -29,21 +29,21 @@ const StyledArrow = styled(Arrow)({
 const content = [
   {
     titleFaq: 'What Are Quanto Perpetuals?',
-    contentFaq: `Quanto Perpetual Futures are trading contracts where you can speculate on an asset (like BTC) valued in one currency (USD), using a different currency (an Altcoin) as collateral. All profits and losses are calculated in the collateral currency (Altcoin) based on the asset's price changes (in USD).`,
-    titleBenefit: 'Gain Leveraged Expsoure with any Altcoin!',
-    contentBenefit: `Trade BTC perpetual futures with any alt coin as collateral! Select your collateral asset, desired leverage (exposure), market direction (long or short), trade type (market or limit) and start trading! . `
+    contentFaq: `Quanto Perpetual Futures are trading contracts where you can speculate on an asset (like BTC) valued in one currency (USD), using a different currency (an altcoin) as collateral. All profits and losses are calculated in the collateral currency (altcoin) based on the asset's price changes (in USD).`,
+    titleBenefit: 'Gain Leveraged Expsoure with any altcoin!',
+    contentBenefit: `Trade BTC perpetual futures with any altcoin as collateral! Select your collateral asset, desired leverage (exposure), market direction (long or short), trade type (market or limit) and start trading! . `
   },
   {
     titleFaq: 'How Does Liquidity Work?',
-    contentFaq: `Single Token LP facilitate Liquidity of trading markets for each alt coin accepted as collateral. Fees generated from trading volume and liquidations are distributed to LP holders, earning real yield! `,
-    titleBenefit: 'Gain Real Yield with ANy Altcoin!',
+    contentFaq: `Single Token LP facilitate Liquidity of trading markets for each altcoin accepted as collateral. Fees generated from trading volume and liquidations are distributed to LP holders, earning real yield! `,
+    titleBenefit: 'Gain Real Yield with Any altcoin!',
     contentBenefit: `Users can LP their altcoins into existing pools, or generate new pools in minutes. Start earning yield today!`
   },
   {
     titleFaq: 'How is PnL CalculatED? ',
     contentFaq: `Profit and Loss (PnL) calculation is solely influenced by fluctuations in the price of Bitcoin (BTC) in USD, not the price of the altcoin used as collateral. Settlements in units of altcoin are determined solely by the changes in Bitcoin's USD price—essentially a multiplier. Max PnL is 900 percent. `,
     titleBenefit: 'Clear Outcomes - Reduced Liquidations!',
-    contentBenefit: `Lets face it - altcoins are more often than not extremely volatile in price. With Krav's quanto perpetuals, you will never get liquidated based on the price of the Altcoin itself. PnL in altcoins is purely based on BTC price, with payouts and losses in altcoin units proportional to BTC price movements in USD.  `
+    contentBenefit: `Lets face it - altcoins are more often than not extremely volatile in price. With Krav's quanto perpetuals, you will never get liquidated based on the price of the altcoin itself. PnL in altcoins is purely based on BTC price, with payouts and losses in altcoin units proportional to BTC price movements in USD.  `
   }
 ]
 
