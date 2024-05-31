@@ -171,17 +171,17 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
                         y2="926.765"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop stop-color="#27B0E6"></stop>
-                        <stop offset="0.107" stop-color="#49A1DB"></stop>
-                        <stop offset="0.288" stop-color="#7D8ACA"></stop>
-                        <stop offset="0.445" stop-color="#A279BD"></stop>
-                        <stop offset="0.572" stop-color="#BA6FB6"></stop>
-                        <stop offset="0.651" stop-color="#C26BB3"></stop>
-                        <stop offset="0.678" stop-color="#D563AD"></stop>
-                        <stop offset="0.715" stop-color="#E65BA7"></stop>
-                        <stop offset="0.76" stop-color="#F156A3"></stop>
-                        <stop offset="0.824" stop-color="#F853A1"></stop>
-                        <stop offset="1" stop-color="#FA52A0"></stop>
+                        <stop stopColor="#27B0E6"></stop>
+                        <stop offset="0.107" stopColor="#49A1DB"></stop>
+                        <stop offset="0.288" stopColor="#7D8ACA"></stop>
+                        <stop offset="0.445" stopColor="#A279BD"></stop>
+                        <stop offset="0.572" stopColor="#BA6FB6"></stop>
+                        <stop offset="0.651" stopColor="#C26BB3"></stop>
+                        <stop offset="0.678" stopColor="#D563AD"></stop>
+                        <stop offset="0.715" stopColor="#E65BA7"></stop>
+                        <stop offset="0.76" stopColor="#F156A3"></stop>
+                        <stop offset="0.824" stopColor="#F853A1"></stop>
+                        <stop offset="1" stopColor="#FA52A0"></stop>
                       </linearGradient>
                     </defs>
                   </svg>

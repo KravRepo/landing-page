@@ -13,7 +13,7 @@ export default function Bottom() {
       <AvailableNetwork />
       {/* <Slides /> */}
       <AuditedBy />
-      <Connect />
+      {/* <Connect /> */}
       <Footer />
     </Box>
   )

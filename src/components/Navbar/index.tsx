@@ -26,7 +26,7 @@ const pages: [string, string][] = [
     'https://www.sushi.com/swap?chainId=8453&token0=NATIVE&token1=0xbE3111856e4acA828593274eA6872f27968C8DD6'
   ],
   ['DOCS', 'https://docs.krav.trade/welcome-to-krav/introduction'],
-  ['Listing', 'https://forms.gle/wiqvg5AES6Lwzgpq9']
+  // ['Listing', 'https://forms.gle/wiqvg5AES6Lwzgpq9']
 ];
 
 export default function Navbar() {
@@ -113,25 +113,25 @@ export default function Navbar() {
             <Stack direction={'row'} spacing={20}>
               <SocialLinks />
 
-              <ClickAwayListener onClickAway={()=> setIsShowMenu(false)}>
+              <ClickAwayListener onClickAway={() => setIsShowMenu(false)}>
                 <Box>
                   <Button
-                    onClick={()=> window.open('https://app.krav.trade')}
+                    onClick={() => window.open('https://app.krav.trade')}
                     variant="contained"
                     sx={{
                       backgroundSize: '100% !important',
                       backgroundPosition: 'right',
                       cursor: 'pointer'
                     }}
-                    // onMouseEnter={() => {
-                    //   setIsMoveOnButton(true);
-                    // }}
-                    // onMouseLeave={() => {
-                    //   setIsMoveOnButton(false);
-                    // }}
-                    // onClick={() => {
-                    //   setIsShowMenu(!isShowMenu);
-                    // }}
+                  // onMouseEnter={() => {
+                  //   setIsMoveOnButton(true);
+                  // }}
+                  // onMouseLeave={() => {
+                  //   setIsMoveOnButton(false);
+                  // }}
+                  // onClick={() => {
+                  //   setIsShowMenu(!isShowMenu);
+                  // }}
                   >
                     <Typography variant="h5" whiteSpace={'nowrap'}>
                       Launch app

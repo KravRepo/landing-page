@@ -9,7 +9,7 @@ import { HideOnMobile, ShowOnMobile } from '@/theme'
 
 const title =
   'Trade BTC \nPerpetual Futures, \nLeveraging Any\n Altcoin as \nCollateral'
-const subtitle = 'Krav - The Pioneer Quanto Exchange'
+const subtitle = 'KRAV - The Pioneer Quanto Exchange'
 
 export default function Hero() {
   return (

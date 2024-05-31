@@ -30,19 +30,19 @@ const content = [
   {
     titleFaq: 'What Are Quanto Perpetuals?',
     contentFaq: `Quanto Perpetual Futures are trading contracts where you can speculate on an asset (like BTC) valued in one currency (USD), using a different currency (an altcoin) as collateral. All profits and losses are calculated in the collateral currency (altcoin) based on the asset's price changes (in USD).`,
-    titleBenefit: 'Gain Leveraged Expsoure with any altcoin!',
-    contentBenefit: `Trade BTC perpetual futures with any altcoin as collateral! Select your collateral asset, desired leverage (exposure), market direction (long or short), trade type (market or limit) and start trading! . `
+    titleBenefit: 'Gain Leveraged Expsoure with any altcoin',
+    contentBenefit: `Trade BTC perpetual futures with any altcoin as collateral! Select your collateral asset, desired leverage (exposure), market direction (long or short), trade type (market or limit) and start trading. `
   },
   {
     titleFaq: 'How Does Liquidity Work?',
-    contentFaq: `Single Token LP facilitate Liquidity of trading markets for each altcoin accepted as collateral. Fees generated from trading volume and liquidations are distributed to LP holders, earning real yield! `,
-    titleBenefit: 'Gain Real Yield with Any altcoin!',
+    contentFaq: `Single Token LP facilitate Liquidity of trading markets for each altcoin accepted as collateral. Fees generated from trading volume and liquidations are distributed to LP holders, earning real yield. `,
+    titleBenefit: 'Gain Real Yield with Any altcoin',
     contentBenefit: `Users can LP their altcoins into existing pools, or generate new pools in minutes. Start earning yield today!`
   },
   {
     titleFaq: 'How is PnL CalculatED? ',
     contentFaq: `Profit and Loss (PnL) calculation is solely influenced by fluctuations in the price of Bitcoin (BTC) in USD, not the price of the altcoin used as collateral. Settlements in units of altcoin are determined solely by the changes in Bitcoin's USD price—essentially a multiplier. Max PnL is 900 percent. `,
-    titleBenefit: 'Clear Outcomes - Reduced Liquidations!',
+    titleBenefit: 'Clear Outcomes - Reduced Liquidations',
     contentBenefit: `Lets face it - altcoins are more often than not extremely volatile in price. With Krav's quanto perpetuals, you will never get liquidated based on the price of the altcoin itself. PnL in altcoins is purely based on BTC price, with payouts and losses in altcoin units proportional to BTC price movements in USD.  `
   }
 ]
@@ -57,10 +57,12 @@ export default function FAQ() {
         display={'grid'}
         gridTemplateColumns={{ xs: '1fr', md: '1fr 30px 1fr' }}
         gridTemplateRows={{ xs: '1fr 40px 1fr', md: '1fr' }}
+        marginBottom={'40px'}
       >
         <Typography
           textAlign={'center'}
-          fontSize={{ xs: 48, md: 60 }}
+          fontSize={{ xs: 68, md: 80 }}
+          letterSpacing={'3px'}
           variant="h5"
         >
           FAQ
@@ -68,7 +70,8 @@ export default function FAQ() {
         {isDownMd ? (
           <Typography
             textAlign={'center'}
-            fontSize={{ xs: 48, md: 60 }}
+            fontSize={{ xs: 68, md: 80 }}
+            letterSpacing={'3px'}
             variant="h5"
             component={'div'}
           >
@@ -79,7 +82,8 @@ export default function FAQ() {
         )}
         <Typography
           textAlign={'center'}
-          fontSize={{ xs: 48, md: 60 }}
+          fontSize={{ xs: 68, md: 80 }}
+          letterSpacing={'3px'}
           variant="h5"
         >
           BENEFITS
@@ -102,44 +106,26 @@ export default function FAQ() {
             sx={{
               boxShadow: 'none',
               backgroundColor: '#D9D9D9',
-              padding: '30px'
+              padding: '50px'
             }}
           >
-            <Typography variant="h5" mb={'20px'} fontSize={'36px'}>
+            <Typography variant="h5" mb={'20px'} fontSize={'42px'} letterSpacing={'1px'}>
               {titleFaq}
             </Typography>
             <Typography fontSize={'20px'} fontFamily={'sans-serif'}>
               {contentFaq}
             </Typography>
           </Card>
-          {isDownMd ? (
-            <ArrowDownward
-              sx={{
-                margin: '0 auto',
-                fontSize: '48px',
-                color: '#2832F5',
-                strokeWidth: 3,
-                stroke: '#2832F5',
-                strokeLinecap: 'round'
-              }}
-            />
-          ) : (
-            <StyledArrow
-              sx={{
-                transform: { xs: 'rotate(90deg)', md: 'rotate(0deg)' },
-                width: { xs: '100px', md: 'calc(100% + 80px)' },
-                margin: { xs: '-20px auto', md: 'auto -40px' }
-              }}
-            />
-          )}
+          {/* Replace the Arrow component with an empty Box */}
+          <Box />
           <Card
             sx={{
               boxShadow: 'none',
               backgroundColor: '#D9D9D9',
-              padding: '30px'
+              padding: '50px'
             }}
           >
-            <Typography variant="h5" mb={'20px'} fontSize={'36px'}>
+            <Typography variant="h5" mb={'20px'} fontSize={'42px'} letterSpacing={'1px'}>
               {titleBenefit}
             </Typography>
             <Typography fontSize={'20px'} fontFamily={'sans-serif'}>

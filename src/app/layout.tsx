@@ -27,16 +27,16 @@ export default function RootLayout({
             display: 'flex',
             justifyContent: 'center',
           }} icon={false} severity="success">
-            <Typography color={'#fff'} sx={{fontSize: {xs: 14, sm: 16}}}>
+            <Typography color={'#fff'} sx={{ fontSize: { xs: 14, sm: 16 } }}>
               KRAV token address is {' '}
               <Tooltip className='tooltip' arrow title="0xbE3111856e4acA828593274eA6872f27968C8DD6">
-                <a style={{color:'#fff'}} target='_blank' href='https://basescan.org/token/0xbE3111856e4acA828593274eA6872f27968C8DD6'>
+                <a style={{ color: '#fff' }} target='_blank' href='https://basescan.org/token/0xbE3111856e4acA828593274eA6872f27968C8DD6'>
                   0xbE31....8DD6
                 </a>
               </Tooltip>
-              {' '}, follow our{' '}
-              <a style={{color:'#fff'}} target='_blank' href='https://twitter.com/kravtrade'>
-                Twitter
+              {' '}, follow us on{' '}
+              <a style={{ color: '#fff' }} target='_blank' href='https://x.com/kravtrade'>
+                X
               </a>
               {' '}and beware of any scam tokens!
             </Typography>

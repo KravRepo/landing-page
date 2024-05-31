@@ -14,7 +14,7 @@ export default function Footer() {
         >
           <SocialLinks />
           <Typography fontSize={{ xs: 14, md: 20 }}>
-            ©2023 KRAV Ltd. All rights reserved.
+            ©2024 KRAV Trade Holdings, Inc. All rights reserved.
           </Typography>
         </Box>
       </Container>

@@ -4,6 +4,7 @@ import { TwitterIcon } from '@/assets/icons/TwitterIcon'
 import { TelegramIcon } from '@/assets/icons/TelegramIcon'
 import { GithubIcon } from '@/assets/icons/GithubIcon'
 import { Box, IconButton } from '@mui/material'
+import XIcon from '@mui/icons-material/X';
 
 const links = [
   // {
@@ -18,7 +19,7 @@ const links = [
   // },
   {
     title: 'Twitter',
-    icon: TwitterIcon,
+    icon: XIcon,
     href: 'https://twitter.com/kravtrade'
   },
   {

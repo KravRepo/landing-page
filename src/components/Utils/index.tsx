@@ -42,7 +42,7 @@ export default function Utils() {
           >
             <Box display={'grid'} gap={{ xs: '24px', md: '18px' }}>
               <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
-                BTC Perpetuals - with Altcoins !
+                BTC Perpetuals - with Altcoins
               </Typography>
               <Typography
                 fontFamily={'sans-serif'}
@@ -51,7 +51,7 @@ export default function Utils() {
                 }}
               >
                 Use Any altcoin as collateral for perpetual Futures with PnL
-                settlement in the same token!
+                settlement in the same token.
               </Typography>
               <Button
                 variant="contained"
@@ -99,7 +99,7 @@ export default function Utils() {
           >
             <Box display={'grid'} gap={{ xs: '24px', md: '18px' }}>
               <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
-                Earn Yield on ANY Altcoin!
+                Earn Yield on ANY Altcoin
               </Typography>
               <Typography
                 fontFamily={'sans-serif'}
@@ -185,17 +185,17 @@ export default function Utils() {
                 fontSize={{ xs: 32, md: 64 }}
                 mb={'32px'}
               >
-                KRAV IS BEING REVAMPED!{' '}
+                KRAV IS BEING REVAMPED{' '}
               </Typography>
               <Typography
                 fontSize={{ xs: 16, md: 24 }}
                 sx={{ textTransform: 'uppercase' }}
               >
-                We&apos;re rolling out a brand-new governance and utility krav
+                We are rolling out a brand new governance and utility krav
                 Token, requiring all current krav tokens to be burned and
-                Replaced. For more details, visit kravtrade on twitter. Minting
+                Replaced. For more details, visit @kravtrade on X. Minting
                 Date for the new token will be announced soon. Stake to burn and
-                Be eligible for new mint!
+                Be eligible for new mint.
               </Typography>
               <Button
                 variant="contained"
