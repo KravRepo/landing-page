@@ -27,8 +27,8 @@ export default function MarqueeBlue() {
           color="#ffffff"
           whiteSpace={'nowrap'}
         >
-          Reviving Altcoins, Unleashing Volitility, Reviving Altcoins,
-          Unleashing Volitility, Reviving Altcoins, Unleashing Volitility
+          Reviving Altcoins, Unleashing Perpetuals, Reviving Altcoins,
+          Unleashing Perpetuals, Reviving Altcoins, Unleashing Perpetuals
         </Typography>
       </AnimatedBox>
     </Box>
