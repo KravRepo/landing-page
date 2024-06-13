@@ -1,20 +1,20 @@
-import { Box, Button, Typography } from '@mui/material'
-import StakeImg from 'src/assets/svg/utils-stake.svg'
-import StakeMobileImg from 'src/assets/svg/utils-stake-mobile.svg'
-import TradeImg from 'src/assets/svg/utils-trade.svg'
-import TradeMobileImg from 'src/assets/svg/utils-trade-mobile.svg'
-import LockImg from 'src/assets/svg/utils-lock.svg'
-import LockMobileImg from 'src/assets/svg/utils-lock-mobile.svg'
-import Img1 from 'src/assets/svg/utils-img1.svg'
-import Img2 from 'src/assets/svg/utils-img2.svg'
-import { HideOnMobile, ShowOnMobile } from '@/theme'
+import { Box, Button, Typography } from "@mui/material";
+import StakeImg from "src/assets/svg/utils-stake.svg";
+import StakeMobileImg from "src/assets/svg/utils-stake-mobile.svg";
+import TradeImg from "src/assets/svg/utils-trade.svg";
+import TradeMobileImg from "src/assets/svg/utils-trade-mobile.svg";
+import LockImg from "src/assets/svg/utils-lock.svg";
+import LockMobileImg from "src/assets/svg/utils-lock-mobile.svg";
+import Img1 from "src/assets/svg/utils-img1.svg";
+import Img2 from "src/assets/svg/utils-img2.svg";
+import { HideOnMobile, ShowOnMobile } from "@/theme";
 
 const styleCenter = {
-  position: 'absolute',
+  position: "absolute",
   padding: 20,
-  borderRadius: '50%',
-  background: '#F1F1F1'
-}
+  borderRadius: "50%",
+  background: "#F1F1F1",
+};
 
 export default function Utils() {
   return (
@@ -22,32 +22,32 @@ export default function Utils() {
       <Box
         mt={100}
         sx={{ mb: { xs: 50, sm: 170 } }}
-        position={'relative'}
-        display={'grid'}
-        gridTemplateColumns={{ xs: '100%', md: '50% 50%' }}
-        borderBottom={'1px solid #000000'}
-        borderTop={'1px solid #000000'}
+        position={"relative"}
+        display={"grid"}
+        gridTemplateColumns={{ xs: "100%", md: "50% 50%" }}
+        borderBottom={"1px solid #000000"}
+        borderTop={"1px solid #000000"}
       >
         <Box
-          padding={{ xs: '40px 24px 60px', md: '72px 90px 100px' }}
-          borderBottom={{ xs: '1px solid #000000', md: 'none' }}
-          borderRight={{ xs: undefined, md: '1px solid #000000' }}
+          padding={{ xs: "40px 24px 60px", md: "72px 90px 100px" }}
+          borderBottom={{ xs: "1px solid #000000", md: "none" }}
+          borderRight={{ xs: undefined, md: "1px solid #000000" }}
           sx={{ height: { xs: 420, md: 720 } }}
-          display={'grid'}
+          display={"grid"}
         >
           <Box
-            display={'grid'}
-            sx={{ justifyItems: { sm: 'center', xs: 'left' } }}
+            display={"grid"}
+            sx={{ justifyItems: { sm: "center", xs: "left" } }}
             maxWidth={720}
           >
-            <Box display={'grid'} gap={{ xs: '24px', md: '18px' }}>
+            <Box display={"grid"} gap={{ xs: "24px", md: "18px" }}>
               <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
                 BTC Perpetuals - with Altcoins
               </Typography>
               <Typography
-                fontFamily={'sans-serif'}
+                fontFamily={"sans-serif"}
                 sx={{
-                  textTransform: 'uppercase'
+                  textTransform: "uppercase",
                 }}
               >
                 Use Any altcoin as collateral for perpetual Futures with PnL
@@ -55,20 +55,20 @@ export default function Utils() {
               </Typography>
               <Button
                 variant="contained"
-                component={'a'}
-                href="https://base.krav.trade/trade"
+                component={"a"}
+                href="https://app.krav.trade/trade"
                 sx={{
                   height: { xs: 32, sm: 52 },
                   width: { xs: 80, sm: 150 },
                   mt: { xs: 15, sm: 36 },
-                  cursor: 'pointer'
+                  cursor: "pointer",
                 }}
               >
                 <Typography
                   variant="h6"
                   fontWeight={900}
                   sx={{ fontSize: { xs: 22, md: 40 } }}
-                  letterSpacing={'0.8px'}
+                  letterSpacing={"0.8px"}
                 >
                   TRADE
                 </Typography>
@@ -86,25 +86,25 @@ export default function Utils() {
         </Box>
 
         <Box
-          padding={{ xs: '40px 24px 40px', md: '72px 90px 100px' }}
-          borderBottom={{ xs: '1px solid #000000', md: 'none' }}
-          borderRight={{ xs: undefined, md: '1px solid #000000' }}
+          padding={{ xs: "40px 24px 40px", md: "72px 90px 100px" }}
+          borderBottom={{ xs: "1px solid #000000", md: "none" }}
+          borderRight={{ xs: undefined, md: "1px solid #000000" }}
           sx={{ height: { xs: 420, md: 720 } }}
-          display={'grid'}
+          display={"grid"}
         >
           <Box
-            display={'grid'}
-            sx={{ justifyItems: { sm: 'center', xs: 'left' } }}
+            display={"grid"}
+            sx={{ justifyItems: { sm: "center", xs: "left" } }}
             maxWidth={720}
           >
-            <Box display={'grid'} gap={{ xs: '24px', md: '18px' }}>
+            <Box display={"grid"} gap={{ xs: "24px", md: "18px" }}>
               <Typography variant="h5" fontSize={{ xs: 32, md: 64 }}>
                 Earn Yield on ANY Altcoin
               </Typography>
               <Typography
-                fontFamily={'sans-serif'}
+                fontFamily={"sans-serif"}
                 sx={{
-                  textTransform: 'uppercase'
+                  textTransform: "uppercase",
                 }}
               >
                 Deposit altcoins into Krav&apos;s single token LP and earn real
@@ -112,20 +112,20 @@ export default function Utils() {
               </Typography>
               <Button
                 variant="contained"
-                component={'a'}
-                href="https://base.krav.trade/liquidity"
+                component={"a"}
+                href="https://app.krav.trade/liquidity"
                 sx={{
                   height: { xs: 32, sm: 52 },
                   width: { xs: 140, sm: 240 },
                   mt: { xs: 15, sm: 36 },
-                  cursor: 'pointer'
+                  cursor: "pointer",
                 }}
               >
                 <Typography
                   variant="h6"
                   fontWeight={900}
                   sx={{ fontSize: { xs: 22, sm: 40 } }}
-                  letterSpacing={'0.8px'}
+                  letterSpacing={"0.8px"}
                 >
                   ADD LIQUIDITY
                 </Typography>
@@ -145,9 +145,9 @@ export default function Utils() {
         <HideOnMobile>
           <Box
             sx={{
-              left: 'calc(50% - 40px)',
+              left: "calc(50% - 40px)",
               top: -40,
-              ...styleCenter
+              ...styleCenter,
             }}
           >
             <Img1 />
@@ -155,9 +155,9 @@ export default function Utils() {
 
           <Box
             sx={{
-              left: 'calc(50% - 122px)',
+              left: "calc(50% - 122px)",
               bottom: -122,
-              ...styleCenter
+              ...styleCenter,
             }}
           >
             <Img2 />
@@ -167,52 +167,52 @@ export default function Utils() {
 
       <Box
         maxWidth={1248}
-        sx={{ padding: { xs: '0 24px 10px 24px', sm: '0 10px 170px 10px' } }}
-        margin={'auto'}
+        sx={{ padding: { xs: "0 24px 10px 24px", sm: "0 10px 170px 10px" } }}
+        margin={"auto"}
       >
         <Box
-          display={'grid'}
-          sx={{ gridTemplateColumns: { sm: '1fr 180px', xs: '1fr' } }}
+          display={"grid"}
+          sx={{ gridTemplateColumns: { sm: "1fr 180px", xs: "1fr" } }}
           gap={68}
         >
           <Box
-            display={'grid'}
-            sx={{ justifyItems: { sm: 'center', xs: 'left' } }}
+            display={"grid"}
+            sx={{ justifyItems: { sm: "center", xs: "left" } }}
           >
             <Box>
               <Typography
                 variant="h5"
                 fontSize={{ xs: 32, md: 64 }}
-                mb={'32px'}
+                mb={"32px"}
               >
-                KRAV IS BEING REVAMPED{' '}
+                KRAV IS BEING REVAMPED{" "}
               </Typography>
               <Typography
                 fontSize={{ xs: 16, md: 24 }}
-                sx={{ textTransform: 'uppercase' }}
+                sx={{ textTransform: "uppercase" }}
               >
                 We are rolling out a brand new governance and utility krav
                 Token, requiring all current krav tokens to be burned and
-                Replaced. For more details, visit @kravtrade on X. Minting
-                Date for the new token will be announced soon. Stake to burn and
-                Be eligible for new mint.
+                Replaced. For more details, visit @kravtrade on X. Minting Date
+                for the new token will be announced soon. Stake to burn and Be
+                eligible for new mint.
               </Typography>
               <Button
                 variant="contained"
-                component={'a'}
+                component={"a"}
                 href="https://app.krav.trade/exchange"
                 sx={{
                   height: { xs: 32, sm: 52 },
                   width: { xs: 80, sm: 150 },
                   mt: { xs: 15, sm: 36 },
-                  cursor: 'pointer'
+                  cursor: "pointer",
                 }}
               >
                 <Typography
                   variant="h6"
                   fontWeight={900}
                   sx={{ fontSize: { xs: 22, md: 40 } }}
-                  letterSpacing={'0.8px'}
+                  letterSpacing={"0.8px"}
                 >
                   STAKE
                 </Typography>
@@ -230,5 +230,5 @@ export default function Utils() {
         </Box>
       </Box>
     </Box>
-  )
+  );
 }

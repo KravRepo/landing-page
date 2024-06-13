@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {
   Box,
@@ -8,62 +8,62 @@ import {
   IconButton,
   Button,
   SwipeableDrawer,
-  ClickAwayListener
-} from '@mui/material'
-import { useState } from 'react'
-import buttonBgUrl from '@/assets/svg/button_long_bg.svg?url'
-import SocialLinks from '../Footer/SocialLinks'
-import SushiImg from 'src/assets/svg/sushi.svg'
-import Arrow from 'src/assets/svg/arrow.svg'
+  ClickAwayListener,
+} from "@mui/material";
+import { useState } from "react";
+import buttonBgUrl from "@/assets/svg/button_long_bg.svg?url";
+import SocialLinks from "../Footer/SocialLinks";
+import SushiImg from "src/assets/svg/sushi.svg";
+import Arrow from "src/assets/svg/arrow.svg";
 
 export default function MobileMenu({ pages }: { pages: [string, string][] }) {
-  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget)
-    const body = document.getElementsByTagName('body')[0]
-    body.style.height = '100vh'
-    body.style.overflowY = 'hidden'
-  }
+    setAnchorElNav(event.currentTarget);
+    const body = document.getElementsByTagName("body")[0];
+    body.style.height = "100vh";
+    body.style.overflowY = "hidden";
+  };
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null)
-    const body = document.getElementsByTagName('body')[0]
-    body.style.height = 'auto'
-    body.style.overflowY = 'auto'
-  }
+    setAnchorElNav(null);
+    const body = document.getElementsByTagName("body")[0];
+    body.style.height = "auto";
+    body.style.overflowY = "auto";
+  };
 
   const menuItems = [
-    { label: 'Base', href: 'https://base.krav.trade' },
-    { label: 'Ethereum', href: 'https://eth.krav.trade' }
-  ]
+    { label: "Base", href: "https://app.krav.trade" },
+    { label: "Ethereum", href: "https://eth.krav.trade" },
+  ];
   const menuItemsStyle = {
-    display: 'flex',
-    textDecoration: 'none',
-    color: '#000',
-    fontFamily: 'Flexa,Monument Extended,Helvetica,sans-serif',
-    fontSize: '28px',
-    fontStyle: 'normal',
-    fontWeight: '900',
-    lineHeight: '110%',
-    letterSpacing: '0.56px',
-    padding: '16px 24px',
-    justifyContent: 'center',
-    alignItems: 'center',
-    transition: 'all .5s',
-    width: '236px',
-    '&:hover, :active': {
-      background: '#F6F6F6!important'
-    }
-  }
-  const [isShowMenu, setIsShowMenu] = useState(false)
+    display: "flex",
+    textDecoration: "none",
+    color: "#000",
+    fontFamily: "Flexa,Monument Extended,Helvetica,sans-serif",
+    fontSize: "28px",
+    fontStyle: "normal",
+    fontWeight: "900",
+    lineHeight: "110%",
+    letterSpacing: "0.56px",
+    padding: "16px 24px",
+    justifyContent: "center",
+    alignItems: "center",
+    transition: "all .5s",
+    width: "236px",
+    "&:hover, :active": {
+      background: "#F6F6F6!important",
+    },
+  };
+  const [isShowMenu, setIsShowMenu] = useState(false);
 
   return (
     <Box
       sx={{
         flexGrow: 0,
-        display: { xs: 'flex', md: 'none' },
-        marginLeft: 'auto'
+        display: { xs: "flex", md: "none" },
+        marginLeft: "auto",
       }}
     >
       <IconButton
@@ -73,7 +73,7 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
         aria-haspopup="true"
         onClick={anchorElNav ? handleCloseNavMenu : handleOpenNavMenu}
         color="inherit"
-        sx={{ position: 'relative', zIndex: 9999 }}
+        sx={{ position: "relative", zIndex: 9999 }}
       >
         {!anchorElNav ? (
           <svg width="32" height="32" viewBox="0 0 32 32">
@@ -101,45 +101,45 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
         )}
       </IconButton>
       <SwipeableDrawer
-        anchor={'top'}
+        anchor={"top"}
         open={Boolean(anchorElNav)}
         onClose={handleCloseNavMenu}
         onOpen={handleOpenNavMenu}
         hideBackdrop
         sx={{
           top: 68,
-          bottom: 0
+          bottom: 0,
         }}
         PaperProps={{
           sx: {
-            boxShadow: 'none',
-            width: '100vw',
-            background: theme => theme.palette.background.default,
-            height: 'calc(100vh - 16px)',
-            maxHeight: 'unset',
-            padding: '40px 24px 200px',
-            position: 'relative',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between'
-          }
+            boxShadow: "none",
+            width: "100vw",
+            background: (theme) => theme.palette.background.default,
+            height: "calc(100vh - 16px)",
+            maxHeight: "unset",
+            padding: "40px 24px 200px",
+            position: "relative",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          },
         }}
       >
-        <Box component={'ul'} display={'grid'} gap={20}>
+        <Box component={"ul"} display={"grid"} gap={20}>
           {pages.map(([page, link], idx) => (
             <MenuItem key={page} onClick={handleCloseNavMenu}>
               <Typography
                 textAlign="center"
                 variant="h5"
-                component={'a'}
+                component={"a"}
                 href={link}
                 target="_blank"
                 sx={{
-                  display: 'flex',
-                  alignItems: 'center',
+                  display: "flex",
+                  alignItems: "center",
                   gap: 5,
-                  textDecoration: 'none',
-                  color: 'inherit'
+                  textDecoration: "none",
+                  color: "inherit",
                 }}
               >
                 {idx === 0 && (
@@ -193,41 +193,41 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
         </Box>
         <Box
           sx={{
-            position: 'relative'
+            position: "relative",
           }}
-          display={'grid'}
-          justifyItems={'center'}
+          display={"grid"}
+          justifyItems={"center"}
           gap={20}
         >
           <SocialLinks />
           <ClickAwayListener onClickAway={() => setIsShowMenu(false)}>
-            <Box display={'flex'}>
+            <Box display={"flex"}>
               <Box
                 sx={{
-                  display: 'flex',
-                  width: '304px',
-                  padding: '4px 8px 4px 10px',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  gap: '10px',
-                  backgroundSize: '100% !important',
-                  backgroundPosition: 'right',
-                  cursor: 'pointer',
-                  background: '#2832F5',
-                  color: '#fff'
+                  display: "flex",
+                  width: "304px",
+                  padding: "4px 8px 4px 10px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "10px",
+                  backgroundSize: "100% !important",
+                  backgroundPosition: "right",
+                  cursor: "pointer",
+                  background: "#2832F5",
+                  color: "#fff",
                 }}
-                onClick={e => {
-                  e.stopPropagation()
-                  setIsShowMenu(!isShowMenu)
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsShowMenu(!isShowMenu);
                 }}
               >
-                <Typography variant="h5" whiteSpace={'nowrap'}>
+                <Typography variant="h5" whiteSpace={"nowrap"}>
                   Launch app
                 </Typography>
                 <Box
                   ml={10}
                   sx={{
-                    transform: `${isShowMenu ? 'rotate(60deg)' : ''}`
+                    transform: `${isShowMenu ? "rotate(60deg)" : ""}`,
                   }}
                 >
                   <svg
@@ -263,25 +263,25 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
                 <Box
                   width={236}
                   px={8}
-                  display={'flex'}
+                  display={"flex"}
                   sx={{
-                    position: 'absolute',
-                    bottom: '50px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    borderRadius: '8px',
-                    border: '1px solid var(--light-grey-02, #DADADA)',
-                    background: '#FFF',
-                    boxShadow: '0px 3px 24px 0px rgba(0, 0, 0, 0.06)',
-                    zIndex: 99
+                    position: "absolute",
+                    bottom: "50px",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    borderRadius: "8px",
+                    border: "1px solid var(--light-grey-02, #DADADA)",
+                    background: "#FFF",
+                    boxShadow: "0px 3px 24px 0px rgba(0, 0, 0, 0.06)",
+                    zIndex: 99,
                   }}
                 >
-                  {menuItems.map(item => (
+                  {menuItems.map((item) => (
                     <Box
-                      component={'a'}
+                      component={"a"}
                       sx={menuItemsStyle}
                       key={item.label}
                       href={item.href}
@@ -335,5 +335,5 @@ export default function MobileMenu({ pages }: { pages: [string, string][] }) {
         }}
       ></Menu> */}
     </Box>
-  )
+  );
 }
