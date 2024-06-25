@@ -30,7 +30,7 @@ const links = [
   {
     title: 'Medium',
     icon: MediumIcon,
-    href: 'https://medium.com/kravtrade'
+    href: 'https://medium.com/krav-trade'
   },
 ]
 
